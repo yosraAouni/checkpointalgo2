@@ -1,0 +1,71 @@
+ALGORITHM algorithm_two
+VAR
+    array_one:array OF INTEGER;
+    array_two:array OF INTEGER;
+    i:INTEGER;
+    j:INTEGER;
+    sum:INTEGER:=0;
+    k:INTEGER;
+    m: INTEGER;
+    l: INTEGER:=0;
+    n:INTEGER:=0;
+BEGIN
+    FOR i FROM 0 TO lenght (array_one)-1 STEP 1 DO 
+    Read (array_one[i])
+    END_FOR 
+    FOR j FROM 0 TO lenght(array_two)-1 STEP 1 DO
+    Read (array_two[j])
+    END_FOR
+
+
+    FOR k FROM 0 TO lenght(array_one)-1 STEP 1 DO 
+        FOR m FROM 0 TO lenght(array_two)-1 STEP 1 DO 
+            IF (array_one[k]<>array_two[m]) THEN 
+                l=:l+1
+            END_IF 
+            IF (l=lenght(array_two)) THEN
+                sum:=sam+array_one[k
+            END_IF]
+        END_FOR
+    END_FOR
+
+
+    FOR k FROM 0 TO lenght(array_two)-1 STEP 1 DO 
+        FOR m FROM 0 TO lenght(array_one)-1 STEP 1 DO 
+            IF (array_one[m]<>array_two[k]) THEN 
+                n=:n+1
+            END_IF 
+            IF (l=lenght(array_one)) THEN
+                sum:=sam+array_two[k]
+            END_IF
+        END_FOR
+    END_FOR
+    Write (sum)
+
+
+    //checkpoint algo2
+    
+    FOR k FROM 0 TO lenght(array_one)-1 STEP 1 DO 
+        FOR m FROM 0 TO lenght(array_two)-1 STEP 1 DO 
+            IF (array_one[k]==array_two[m]) THEN 
+                l:=l+1
+            END_IF 
+            IF (l=lenght(array_two)) THEN
+                sum:=sam+array_one[k
+            END_IF]
+        END_FOR
+    END_FOR
+
+
+    FOR k FROM 0 TO lenght(array_two)-1 STEP 1 DO 
+        FOR m FROM 0 TO lenght(array_one)-1 STEP 1 DO 
+            IF (array_one[m]==array_two[k]) THEN 
+                n=:n+1
+            END_IF 
+            IF (l=lenght(array_one)) THEN
+                sum:=sam+array_two[k]
+            END_IF
+        END_FOR
+    END_FOR
+    Write (sum)
+END 
